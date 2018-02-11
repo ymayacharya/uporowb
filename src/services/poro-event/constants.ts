@@ -1,0 +1,1 @@
+export const GET_EVENT_DETAILSURL:string='https://uporo.azurewebsites.net/api/SportEvent/GetAllSportEvents'

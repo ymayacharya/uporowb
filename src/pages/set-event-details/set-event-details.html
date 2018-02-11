@@ -1,0 +1,124 @@
+<!--
+  Generated template for the SetEventDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Set Event Details</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup]="eventDetailsForm" (ngSubmit)="saveEventDetails(eventDetailsForm)">
+        <div class="address-info">
+            <ion-item>
+                <ion-label stacked>Event Name</ion-label>
+                <ion-input formControlName="eventName" autosize type="text" placeholder="Event name here"> </ion-input>
+
+            </ion-item>
+            <small *ngIf="eventName.errors && ( eventName.dirty || eventName.touched || formSubmitted)" class="red">Set name</small>
+            <small *ngIf="eventName.errors.required"> Event Name is required</small>
+
+            <ion-item>
+                <ion-label stacked>Description</ion-label>
+                <ion-textarea formControlName="eventDescription" autosize type="text" placeholder="Describe your event"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Contact Person</ion-label>
+                <ion-input formControlName="contactPerson" autosize type="text" placeholder="Contact person name"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Contact Person mobile number</ion-label>
+                <ion-input formControlName="contactPesronNo" autosize type="text" placeholder="Enter comma seperated mobile numbers"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Sport</ion-label>
+                <ion-select formControlName="addressType">
+                    <ion-option value="1">Cricket</ion-option>
+                    <ion-option value="2">Football</ion-option>
+                    <ion-option value="3">Hockey</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>First Prize</ion-label>
+                <ion-input formControlName="firstPrize" autosize type="text" placeholder="Enter first prize"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Second Prize</ion-label>
+                <ion-input formControlName="secondPrize" autosize type="text" placeholder="Enter second prize"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Third Prize</ion-label>
+                <ion-input formControlName="thirdPrize" autosize type="text" placeholder="Enter third price"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Entry Fee</ion-label>
+                <ion-input formControlName="thirdPrize" autosize type="text" placeholder="Enter entry fee amount"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Start Date</ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" formControlName="eventStartDate"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>End Date</ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" formControlName="eventEndDate"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Registration Start Date</ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" formControlName="regStartDate"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Registration End Date</ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" formControlName="regEndDate"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Address Line 1</ion-label>
+                <ion-textarea formControlName="addressLine1" autosize type="text" placeholder="Max 500 characters"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Address Line 2</ion-label>
+                <ion-textarea formControlName="addressLine2" autosize type="text" placeholder="Max 500characters"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>City</ion-label>
+                <ion-input formControlName="city" autosize type="text" placeholder="Enter city name"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>State</ion-label>
+                <ion-input formControlName="state" autosize type="text" placeholder="Enter state name"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Pincode</ion-label>
+                <ion-input formControlName="pincode" autosize type="text" placeholder="Enter 6 digit pincode"> </ion-input>
+            </ion-item>
+        </div>
+
+        <div padding-top>
+            <button type="submit" round full ion-button color="green">
+                <span style="color:#fff">Save Event</span>
+            </button>
+        </div>
+    </form>
+
+</ion-content>
